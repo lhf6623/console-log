@@ -1,16 +1,27 @@
 {
   "name": "console-log",
   "displayName": "Console Log",
+  "icon": "icon.png",
   "description": "快速插入 console.log",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.116.0"
   },
   "categories": [
-    "Other"
+    "Snippets"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lhf6623/console-log.git"
+  },
   "activationEvents": [
-    "*"
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
+    "onLanguage:vue",
+    "onLanguage:html",
+    "onLanguage:svelte"
   ],
   "main": "./dist/extension.js",
   "contributes": {
@@ -43,15 +54,15 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.116.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
-    "typescript-eslint": "^8.56.1",
-    "eslint": "^9.39.3",
+    "@types/vscode": "^1.116.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
     "esbuild": "^0.27.3",
+    "eslint": "^9.39.3",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.9.3",
-    "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2"
+    "typescript-eslint": "^8.56.1"
   }
 }
