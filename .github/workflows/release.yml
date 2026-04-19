@@ -24,15 +24,35 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Install vsce
+        run: npm install -g @vscode/vsce
+
+      - name: Extract version
+        id: version
+        run: echo "ver=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Set version in package.json
+        run: |
+          node -e "
+            const fs = require('fs');
+            const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+            pkg.version = '${{ steps.version.outputs.ver }}';
+            fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
+            console.log('Version set to:', pkg.version);
+          "
+
       - name: Build & Package
-        run: pnpm run package
+        run: |
+          pnpm run compile
+          npx vsce package --no-git-tag-version
+          ls *.vsix
 
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          VERSION=${GITHUB_REF#refs/tags/v}
+          VERSION='${{ steps.version.outputs.ver }}'
           gh release create "v$VERSION" \
             --title "v$VERSION" \
             --notes "Release v$VERSION" \
-            ./console-log-*.vsix
+            ./*.vsix
