@@ -1,9 +1,11 @@
-# Change Log
+# 更新日志
 
-All notable changes to the "consoe-log" extension will be documented in this file.
+本文件记录了 "console-log" 扩展的所有重要变更。
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+请参阅 [Keep a Changelog](http://keepachangelog.com/) 了解如何组织此文件的建议。
 
-## [Unreleased]
+## [未发布]
 
-- Initial release
+- 首次发布
+
+快速插入 console.log

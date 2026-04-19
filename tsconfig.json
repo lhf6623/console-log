@@ -7,10 +7,12 @@
 		],
 		"sourceMap": true,
 		"rootDir": "src",
-		"strict": true,   /* enable all strict type-checking options */
-		/* Additional Checks */
-		// "noImplicitReturns": true, /* Report error when not all code paths in function return a value. */
-		// "noFallthroughCasesInSwitch": true, /* Report errors for fallthrough cases in switch statement. */
-		// "noUnusedParameters": true,  /* Report errors on unused parameters. */
-	}
+		"strict": true,   /* 启用所有严格类型检查选项 */
+		"types": ["node"],  /* 添加 Node.js 类型定义 */
+		/* 额外检查 */
+		// "noImplicitReturns": true, /* 当函数中并非所有代码路径都返回值时报告错误。 */
+		// "noFallthroughCasesInSwitch": true, /* 报告 switch 语句中的贯穿错误。 */
+		// "noUnusedParameters": true,  /* 报告未使用参数的错误。 */
+	},
+	"include": ["src/**/*"]
 }

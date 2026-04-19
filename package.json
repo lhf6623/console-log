@@ -1,6 +1,6 @@
 {
-  "name": "consoe-log",
-  "displayName": "consoe-log",
+  "name": "console-log",
+  "displayName": "Console Log",
   "description": "快速插入 console.log",
   "version": "0.0.1",
   "engines": {
@@ -9,13 +9,22 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "*"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "consoe-log.helloWorld",
-        "title": "Hello World"
+        "command": "console-log.insertLog",
+        "title": "Insert Console.log"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "console-log.insertLog",
+        "key": "Ctrl+Alt+L",
+        "mac": "Ctrl+Alt+L"
       }
     ]
   },

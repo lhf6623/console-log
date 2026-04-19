@@ -11,14 +11,14 @@ const esbuildProblemMatcherPlugin = {
 
 	setup(build) {
 		build.onStart(() => {
-			console.log('[watch] build started');
+			console.log('[watch] 构建已开始');
 		});
 		build.onEnd((result) => {
 			result.errors.forEach(({ text, location }) => {
-				console.error(`✘ [ERROR] ${text}`);
+				console.error(`✘ [错误] ${text}`);
 				console.error(`    ${location.file}:${location.line}:${location.column}:`);
 			});
-			console.log('[watch] build finished');
+			console.log('[watch] 构建已完成');
 		});
 	},
 };
@@ -38,7 +38,7 @@ async function main() {
 		external: ['vscode'],
 		logLevel: 'silent',
 		plugins: [
-			/* add to the end of plugins array */
+			/* 添加到插件数组末尾 */
 			esbuildProblemMatcherPlugin,
 		],
 	});

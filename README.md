@@ -1,51 +1,51 @@
-# consoe-log README
+# console-log README
 
-This is the README for your extension "consoe-log". After writing up a brief description, we recommend including the following sections.
+这是你的扩展 "console-log" 的 README。编写完简要描述后，建议包含以下部分。
 
-## Features
+## 功能
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+描述扩展的具体功能，并附上扩展运行时的截图。图片路径相对于本 README 文件。
 
-For example if there is an image subfolder under your extension project workspace:
+例如，如果扩展项目工作区下有一个图片子文件夹：
 
-\!\[feature X\]\(images/feature-x.png\)
+\!\[功能 X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+> 提示：许多热门扩展都使用动画。这是展示扩展的绝佳方式！我们推荐简短、聚焦的动画，便于理解。
 
-## Requirements
+## 需求
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+如果有任何需求或依赖项，添加一个部分来描述这些内容，以及如何安装和配置。
 
-## Extension Settings
+## 扩展设置
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+如果你的扩展通过 `contributes.configuration` 扩展点添加了任何 VS Code 设置，请包含此部分。
 
-For example:
+例如：
 
-This extension contributes the following settings:
+此扩展贡献了以下设置：
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+* `myExtension.enable`：启用/禁用此扩展。
+* `myExtension.thing`：设置为 `blah` 以执行某些操作。
 
-## Known Issues
+## 已知问题
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+指出已知问题可以帮助减少用户针对你的扩展重复提交相同的问题。
 
-## Release Notes
+## 发布说明
 
-Users appreciate release notes as you update your extension.
+用户在更新扩展时会关注发布说明。
 
 ### 1.0.0
 
-Initial release of ...
+初始版本...
 
 ### 1.0.1
 
-Fixed issue #.
+修复问题 #。
 
 ### 1.1.0
 
-Added features X, Y, and Z.
+添加功能 X、Y 和 Z。
 
 ---
 
