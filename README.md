@@ -1,71 +1,49 @@
-# console-log README
+# Console Log
 
-这是你的扩展 "console-log" 的 README。编写完简要描述后，建议包含以下部分。
+快速插入 `console.log` 的 VS Code 扩展。
+
+选中变量或表达式，一键插入 `console.log('变量名:', 变量名)`，自动保持缩进。
 
 ## 功能
 
-描述扩展的具体功能，并附上扩展运行时的截图。图片路径相对于本 README 文件。
+- 选中 `user.name`，按快捷键自动插入 `console.log('user.name:', user.name);`
+- 自动保持当前行的缩进
+- 支持多行选中，log 插入在选区最后一行下方
+- 右下角状态栏提示
 
-例如，如果扩展项目工作区下有一个图片子文件夹：
+## 快捷键
 
-\!\[功能 X\]\(images/feature-x.png\)
+| 平台 | 快捷键 |
+|---|---|
+| Windows / Linux | `Ctrl+Alt+L` |
+| macOS | `Ctrl+Alt+L` |
 
-> 提示：许多热门扩展都使用动画。这是展示扩展的绝佳方式！我们推荐简短、聚焦的动画，便于理解。
+也可以通过命令面板（`Cmd+Shift+P`）搜索 `Insert Console.log` 触发。
 
-## 需求
+## 支持的语言
 
-如果有任何需求或依赖项，添加一个部分来描述这些内容，以及如何安装和配置。
+JavaScript、TypeScript、Vue、HTML、Svelte
 
-## 扩展设置
+## 使用示例
 
-如果你的扩展通过 `contributes.configuration` 扩展点添加了任何 VS Code 设置，请包含此部分。
+选中代码中的变量：
 
-例如：
+```javascript
+const name = user.name;
+//            ^^^^^^^^ 选中
+```
 
-此扩展贡献了以下设置：
+按 `Ctrl+Alt+L`，自动插入：
 
-* `myExtension.enable`：启用/禁用此扩展。
-* `myExtension.thing`：设置为 `blah` 以执行某些操作。
+```javascript
+const name = user.name;
+console.log('user.name:', user.name);
+```
 
 ## 已知问题
 
-指出已知问题可以帮助减少用户针对你的扩展重复提交相同的问题。
+暂无
 
-## 发布说明
+## 更新日志
 
-用户在更新扩展时会关注发布说明。
-
-### 1.0.0
-
-初始版本...
-
-### 1.0.1
-
-修复问题 #。
-
-### 1.1.0
-
-添加功能 X、Y 和 Z。
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+参见 [CHANGELOG.md](./CHANGELOG.md)
