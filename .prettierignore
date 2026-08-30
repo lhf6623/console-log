@@ -1,0 +1,13 @@
+# 构建产物
+dist/
+out/
+node_modules/
+.vscode-test/
+
+# 生成/辅助产物（非源码）
+pnpm-lock.yaml
+research/
+.vscode/
+
+# AgentTeams 团队状态
+.agent-teams/

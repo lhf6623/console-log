@@ -6,9 +6,15 @@ src/**
 .gitignore
 .yarnrc
 esbuild.js
-vsc-extension-quickstart.md
 **/tsconfig.json
 **/eslint.config.mjs
 **/*.map
 **/*.ts
 **/.vscode-test.*
+.agent-teams/**
+.agent-teams
+.github/**
+pnpm-lock.yaml
+pnpm-workspace.yaml
+.prettierignore
+research/**

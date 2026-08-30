@@ -3,7 +3,7 @@
   "displayName": "Console Log",
   "icon": "icon.png",
   "description": "快速插入 console.log",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -24,6 +24,7 @@
     "onLanguage:svelte"
   ],
   "main": "./dist/extension.js",
+  "dependencies": {},
   "contributes": {
     "commands": [
       {
@@ -41,28 +42,26 @@
   },
   "scripts": {
     "vscode:prepublish": "pnpm run package",
-    "compile": "pnpm run check-types && pnpm run lint && node esbuild.js",
+    "compile": "pnpm run check-types && pnpm run lint && pnpm run format:check && node esbuild.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "watch": "npm-run-all -p watch:*",
     "watch:esbuild": "node esbuild.js --watch",
     "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
     "package": "pnpm run check-types && pnpm run lint && node esbuild.js --production",
-    "compile-tests": "tsc -p . --outDir out",
-    "watch-tests": "tsc -p . -w --outDir out",
-    "pretest": "pnpm run compile-tests && pnpm run compile && pnpm run lint",
     "check-types": "tsc --noEmit",
-    "lint": "eslint src",
-    "test": "vscode-test"
+    "lint": "eslint src"
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.10",
-    "@types/node": "22.x",
+    "@types/node": "~22.20.1",
     "@types/vscode": "^1.74.0",
-    "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2",
-    "esbuild": "^0.27.3",
-    "eslint": "^9.39.3",
+    "acorn": "^8.18.0",
+    "acorn-typescript": "^1.4.13",
+    "esbuild": "^0.27.7",
+    "eslint": "^9.39.5",
     "npm-run-all": "^4.1.5",
+    "prettier": "^3.9.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.56.1"
+    "typescript-eslint": "^8.68.0"
   }
 }
